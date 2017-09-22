@@ -4,7 +4,14 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'animal-list',
   template: `
-  <div class="container" *ngFor="let animal of childAnimalList">
+
+    <div>
+      <label>Enter a max age: </label>
+      <input #maxAge>
+      <button (click)="sortAnimals(maxAge.value)">Sort</button>
+    </div>
+
+  <div class="container" *ngFor="let animal of childAnimalList| ageFilter:filterAgeSender">
     <ul>
       <li>Species: {{animal.species}}</li>
       <li>Name: {{animal.name}}</li>
@@ -22,12 +29,16 @@ import { Animal } from './animal.model';
   `
 })
 
-
 export class AnimalListComponent {
+  filterAgeSender: number = -1;
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter();
 
   editButtonClicked(animalToEdit: Animal) {
     this.clickSender.emit(animalToEdit);
+  }
+
+  sortAnimals(maxAge: number) {
+    this.filterAgeSender = maxAge;
   }
 }
