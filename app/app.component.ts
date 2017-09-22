@@ -7,6 +7,7 @@ import { Animal } from './animal.model';
   <div class="container">
     <h1>Welcome to the Zoo!</h1>
     <animal-list [childAnimalList]="masterAnimalList"></animal-list>
+    <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
   </div>
   `
 })
@@ -18,4 +19,7 @@ export class AppComponent {
     new Animal('Northwest Black Tailed Deer', '"Tinkerbell', 8, 'Herbivore', 'Northern Trail', 2, 'Female', 'Delicate roots and leaves', 'Loud Noises')
   ];
 
+  addAnimal(newAnimalToAdd: Animal) {
+    this.masterAnimalList.push(newAnimalToAdd);
+  }
 }
