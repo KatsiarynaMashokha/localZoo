@@ -19,7 +19,11 @@ import { Animal } from './animal.model';
     </div>
     <div>
       <label> Diet: </label>
-      <input #newDiet placeholder="Enter diet type">
+      <select #newDiet>
+        <option value="carnivore">Carnivore</option>
+        <option value="herbivore">Herbivore</option>
+        <option value="omnivore">Omnivore</option>
+      </select>
     </div>
     <div>
       <label> Location: </label>
@@ -31,7 +35,10 @@ import { Animal } from './animal.model';
     </div>
     <div>
       <label> Sex: </label>
-      <input #newSex placeholder="Enter gender">
+      <select #newSex>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+      </select>
     </div>
     <div>
       <label> Likes: </label>
