@@ -5,27 +5,26 @@ import { Animal } from './animal.model';
   selector: 'animal-list',
   template: `
 
-    <div>
       <label>Enter a max age: </label>
       <input #maxAge>
       <button (click)="sortAnimals(maxAge.value)">Sort</button>
-    </div>
+      <div class="row">
 
-  <div class="container" *ngFor="let animal of childAnimalList| ageFilter:filterAgeSender">
-    <ul>
-      <li>Species: {{animal.species}}</li>
-      <li>Name: {{animal.name}}</li>
-      <li>Age: {{animal.age}}</li>
-      <li>Diet: {{animal.diet}} </li>
-      <li>Location: {{animal.location}}</li>
-      <li>Caretakers: {{animal.caretakers}}</li>
-      <li>Sex: {{animal.sex}}</li>
-      <li>Likes: {{animal.likes}} </li>
-      <li>Dislikes: {{animal.dislikes}}</li>
-      <button (click)='editButtonClicked(animal)' type='btn'>Edit</button>
-      <br>
-    </ul>
-  </div>
+          <div class="col-md-3 box" *ngFor="let animal of childAnimalList|ageFilter:filterAgeSender">
+            <li><span class="title">Species: </span>{{animal.species}}</li>
+            <li><span class="title">Name: </span>{{animal.name}}</li>
+            <li><span class="title">Age: </span>{{animal.age}}</li>
+            <li><span class="title">Diet: </span>{{animal.diet}}</li>
+            <li><span class="title">Location: </span>{{animal.location}}</li>
+            <li><span class="title">Caretakers: </span>{{animal.caretakers}}</li>
+            <li><span class="title">Sex: </span>{{animal.sex}}</li>
+            <li><span class="title">Likes: </span>{{animal.likes}}</li>
+            <li><span class="title">Dislikes: </span>{{animal.dislikes}}</li>
+            <button class="btn btn-default btn-sm edit" (click)='editButtonClicked(animal)'>
+            <span class="glyphicon glyphicon-pencil"></span>Edit</button>
+
+        </div>
+       </div>
   `
 })
 
