@@ -20,9 +20,9 @@ import { Animal } from './animal.model';
     <div>
       <label> Diet: </label>
       <select #newDiet>
-        <option value="carnivore">Carnivore</option>
-        <option value="herbivore">Herbivore</option>
-        <option value="omnivore">Omnivore</option>
+        <option value="Carnivore">Carnivore</option>
+        <option value="Herbivore">Herbivore</option>
+        <option value="Omnivore">Omnivore</option>
       </select>
     </div>
     <div>
