@@ -5,52 +5,45 @@ import { Animal } from './animal.model';
   selector: 'new-animal',
   template: `
   <div class="addNewAnimal">
-    <h4>New Animal</h4>
     <div>
       <label> Species: </label>
-      <input #newSpecies>
+      <input #newSpecies placeholder="Enter Species">
     </div>
     <div>
       <label> Name: </label>
-      <input #newName>
+      <input #newName placeholder="Enter name">
     </div>
     <div>
       <label> Age: </label>
-      <input #newAge>
+      <input type="number" #newAge placeholder="Enter age">
     </div>
     <div>
       <label> Diet: </label>
-      <select #newDiet>
-        <option [value]="herbivore">Herbivore</option>
-        <option [value]="carnivore">Carnivore</option>
-        <option [value]="omnivore">Omnivore</option>
-      </select>
+      <input #newDiet placeholder="Enter diet type">
     </div>
     <div>
       <label> Location: </label>
-      <input #newLocation>
+      <input #newLocation placeholder="Enter location">
     </div>
     <div>
       <label> Caretakers: </label>
-      <input #newCaretakers>
+      <input type="number" #newCaretakers placeholder="Enter number of caretakers">
     </div>
     <div>
       <label> Sex: </label>
-      <select #newSex>
-        <option [value]="female"> Female </option>
-        <option [value]="male"> Male </option>
-      </select>
+      <input #newSex placeholder="Enter gender">
     </div>
     <div>
       <label> Likes: </label>
-      <input #newLikes>
+      <input #newLikes placeholder="Enter what animal likes">
     </div>
     <div>
       <label> Dislikes: </label>
-      <input #newDislikes>
+      <input #newDislikes placeholder="Enter what animal dislikes">
     </div>
     <button class="addAnimal" (click)="addAnimal(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value);
-    newSpecies.value=''; newName.value=''; newAge.value=''; newLocation.value=''; newCaretakers.value=''; newLikes.value=''; newDislikes.value='';">Add animal</button>
+    newSpecies.value=''; newName.value=''; newAge.value=''; newLocation.value=''; newCaretakers.value=''; newLikes.value=''; newDislikes.value='';">
+    <span class="glyphicon glyphicon-plus"></span> Animal</button>
     </div>
   `
 })

@@ -15,7 +15,7 @@ body {
 .title {
   color: #CD853F;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1.5rem;
 }
 
 .edit {
@@ -64,6 +64,15 @@ label, .addAnimal {
   margin-top: 15px;
 }
 
-.addNewAnimal {
-  
+li{
+  margin-top: 10px;
+}
+
+.intro {
+  font-size: 1.6rem;
+}
+
+.addAnimal {
+  margin-top: 5px;
+  font-weight: bold;
 }

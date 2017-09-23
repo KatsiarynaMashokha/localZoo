@@ -6,11 +6,11 @@ import { Animal } from './animal.model';
   template: `
   <div *ngIf="childSelectedAnimal">
     <label>Enter name:</label>
-    <input [(ngModel)]="childSelectedAnimal.name"><br>
+    <input [(ngModel)]="childSelectedAnimal.name" placeholder={{childSelectedAnimal.name}}><br>
     <label>Edit age:</label>
-    <input [(ngModel)]="childSelectedAnimal.age"><br>
+    <input [(ngModel)]="childSelectedAnimal.age" placeholder={{childSelectedAnimal.age}}><br>
     <label>Edit number of caretakers:</label>
-    <input [(ngModel)]="childSelectedAnimal.caretakers"><br>
+    <input [(ngModel)]="childSelectedAnimal.caretakers" placeholder={{childSelectedAnimal.caretakers}}><br>
     <button (click)="doneButtonClicked()">Done</button>
   </div>
   `
